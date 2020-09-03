@@ -4,6 +4,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 import TabNavigator from '../navigators/TabNavigator';
 import fetch from 'node-fetch';
 import { Constants } from '../utils/Constants';
+import HeaderComponent from 'components/HeaderComponent';
+import { View } from 'react-native';
 
 type Props = { navigation: NavigationSwitchProp };
 

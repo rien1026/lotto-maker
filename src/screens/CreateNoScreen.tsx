@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavigationSwitchProp } from 'react-navigation';
 import { FlatList, Text, TouchableWithoutFeedback, ScrollView, View, StyleSheet } from 'react-native';
 import LottieView from 'lottie-react-native';
+import HeaderComponent from '../components/HeaderComponent';
 
 type Props = { navigation: NavigationSwitchProp };
 type State = {
@@ -87,6 +88,7 @@ export default class CreateWinNoScreen extends React.Component<Props, State> {
 	render() {
 		return (
 			<ScrollView style={{ width: '100%', flex: 1 }}>
+				<HeaderComponent />
 				<View style={{ flex: 1, alignItems: 'center', backgroundColor: '#ebebeb', borderWidth: 1 }}>
 					<LottieView source={require('../assets/3407-coinpig.json')} loop style={{ width: 300, height: 300 }} />
 				</View>
