@@ -51,16 +51,19 @@ export default class MainScreen extends React.Component<Props> {
 	getWinHistoryListStrFromAsync = async () => {
 		try {
 			return await AsyncStorage.getItem('winHistoryList');
-		} catch (error) {}
+		} catch (error) { }
 	};
 
 	setWinHistoryListToAsync = async (winHistoryList: any[]) => {
 		try {
 			await AsyncStorage.setItem('winHistoryList', JSON.stringify(winHistoryList));
-		} catch (error) {}
+		} catch (error) { }
 	};
 
 	render() {
-		return <TabNavigator />;
+		return (
+			<TabNavigator />
+		)
+
 	}
 }

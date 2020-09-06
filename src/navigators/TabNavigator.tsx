@@ -11,25 +11,18 @@ import PastWinNoScreen from '../screens/PastWInNoScreen';
 
 const styles = StyleSheet.create({
 	tab: {
-		backgroundColor: COLORS.BLACK,
+		backgroundColor: "#816f66",
 		height: 60,
-		paddingVertical: 15,
 	},
 	label: {
-		fontSize: 8,
-		lineHeight: 8,
+		fontSize: 16,
+		lineHeight: 18,
 	},
 
 	indicator: {
 		borderBottomColor: COLORS.BLACK,
 		borderBottomWidth: 2,
-	},
-
-	icon: {
-		width: '100%',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
+	}
 });
 
 const tabNavigator = createMaterialTopTabNavigator(
@@ -37,19 +30,19 @@ const tabNavigator = createMaterialTopTabNavigator(
 		CreateWinNo: {
 			screen: ({ screenProps, navigation }) => <CreateWinNoScreen navigation={navigation} />,
 			navigationOptions: {
-				tabBarLabel: '1',
+				tabBarLabel: '번호생성',
 			},
 		},
 		PastWinNo: {
 			screen: ({ screenProps, navigation }) => <PastWinNoScreen navigation={navigation} />,
 			navigationOptions: {
-				tabBarLabel: '2',
+				tabBarLabel: '회차별 당첨',
 			},
 		},
 		CheckWinNo: {
 			screen: ({ screenProps, navigation }) => <CheckWinNoScreen navigation={navigation} />,
 			navigationOptions: {
-				tabBarLabel: '3',
+				tabBarLabel: '당첨확인',
 			},
 		},
 	},
@@ -59,13 +52,11 @@ const tabNavigator = createMaterialTopTabNavigator(
 		tabBarPosition: 'bottom',
 		tabBarOptions: {
 			showLabel: true,
-			showIcon: true,
 			activeTintColor: COLORS.WHITE,
 			inactiveTintColor: COLORS.GRAY,
 			tabStyle: styles.tab,
 			labelStyle: styles.label,
 			indicatorStyle: styles.indicator,
-			iconStyle: styles.icon,
 		},
 	},
 );
