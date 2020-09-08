@@ -7,11 +7,11 @@ import { COLORS } from '../themes';
 import { StyleSheet } from 'react-native';
 import CreateWinNoScreen from '../screens/CreateNoScreen';
 import CheckWinNoScreen from '../screens/CheckWinNoScreen';
-import PastWinNoScreen from '../screens/PastWInNoScreen';
+import WinNoHistoryScreen from '../screens/WinNoHistoryScreen';
 
 const styles = StyleSheet.create({
 	tab: {
-		backgroundColor: "#816f66",
+		backgroundColor: '#816f66',
 		height: 60,
 	},
 	label: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 	indicator: {
 		borderBottomColor: COLORS.BLACK,
 		borderBottomWidth: 2,
-	}
+	},
 });
 
 const tabNavigator = createMaterialTopTabNavigator(
@@ -33,8 +33,8 @@ const tabNavigator = createMaterialTopTabNavigator(
 				tabBarLabel: '번호생성',
 			},
 		},
-		PastWinNo: {
-			screen: ({ screenProps, navigation }) => <PastWinNoScreen navigation={navigation} />,
+		WinNoHistory: {
+			screen: ({ screenProps, navigation }) => <WinNoHistoryScreen navigation={navigation} />,
 			navigationOptions: {
 				tabBarLabel: '회차별 당첨',
 			},
